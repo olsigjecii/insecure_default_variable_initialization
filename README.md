@@ -1,4 +1,5 @@
-Lesson: Insecure Default Variable Initialization in Rust
+# Insecure Default Variable Initialization in Rust 🦀
+
 1. Lesson Summary
 This lesson explores the Insecure Default Variable Initialization vulnerability within the context of a Rust web application built with the actix-web framework.
 
@@ -10,7 +11,7 @@ A /vulnerable/login endpoint that sets cookies using the default, insecure setti
 A /secure/login endpoint that explicitly configures cookies with secure attributes, mitigating the risks.
 The impact of such insecure defaults can be severe. A cookie without the secure flag can be intercepted in a Man-in-the-Middle (MITM) attack. A cookie without the httpOnly flag can be stolen via Cross-Site Scripting (XSS), potentially leading to session hijacking.
 
-2. Application Setup and Execution
+2.Application Setup and Execution
 Follow these steps to set up and run the demonstration application.
 
 Prerequisites
@@ -33,7 +34,7 @@ Bash
 cargo run
 You should see the output: Server running at http://127.0.0.1:8080
 
-3. Demonstrating the Vulnerability
+3.Demonstrating the Vulnerability
 We will use curl with the -v (verbose) flag to inspect the Set-Cookie headers returned by the server.
 
 Vulnerable Endpoint
